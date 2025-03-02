@@ -9,24 +9,24 @@ INSERT_STOP_TIMES_STATEMENT = 'INSERT into mbta_stop_times(trip_id, arrival_time
 INSERT_STOPS_STATEMENT = 'INSERT into mbta_stops(stop_id, stop_code, stop_name, stop_desc, platform_code, platform_name, stop_lat, stop_lon, zone_id, stop_address, stop_url, level_id, location_type, parent_station, wheelchair_boarding, municipality, on_street, at_street, vehicle_type) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);'
 
 FILES_DICT = {
-    # 'routes': {
-    #     'file': 'routes.txt',
-    #     'create_table': CREATE_ROUTES_TABLE,
-    #     'drop_table': 'DROP TABLE IF EXISTS mbta_routes;',
-    #     'insert_command': INSERT_ROUTES_STATEMENT
-    # },
-    # 'trips': {
-    #     'file': 'trips.txt',
-    #     'create_table': CREATE_TRIPS_TABLE,
-    #     'drop_table': 'DROP TABLE IF EXISTS mbta_trips;',
-    #     'insert_command': INSERT_TRIPS_STATEMENT 
-    # },
-    # 'stop_times': {
-    #     'file': 'stop_times.txt',
-    #     'create_table': CREATE_STOP_TIMES_TABLE,
-    #     'drop_table': 'DROP TABLE IF EXISTS mbta_stop_times',
-    #     'insert_command': INSERT_STOP_TIMES_STATEMENT
-    # },
+    'routes': {
+        'file': 'routes.txt',
+        'create_table': CREATE_ROUTES_TABLE,
+        'drop_table': 'DROP TABLE IF EXISTS mbta_routes;',
+        'insert_command': INSERT_ROUTES_STATEMENT
+    },
+    'trips': {
+        'file': 'trips.txt',
+        'create_table': CREATE_TRIPS_TABLE,
+        'drop_table': 'DROP TABLE IF EXISTS mbta_trips;',
+        'insert_command': INSERT_TRIPS_STATEMENT 
+    },
+    'stop_times': {
+        'file': 'stop_times.txt',
+        'create_table': CREATE_STOP_TIMES_TABLE,
+        'drop_table': 'DROP TABLE IF EXISTS mbta_stop_times',
+        'insert_command': INSERT_STOP_TIMES_STATEMENT
+    },
     'stops': {
         'file': 'stops.txt',
         'create_table': CREATE_STOPS_TABLE,
