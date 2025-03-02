@@ -19,6 +19,7 @@ for file in FILES_DICT.values():
         print('Working on {f}'.format(f=file['file']))
         cursor.execute(file['drop_table'])
         cursor.execute(file['create_table'])
+        f.readline()
         for line in f:
             line_properties = []
             line_properties = recursive_split(line)
