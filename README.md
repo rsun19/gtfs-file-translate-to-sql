@@ -10,7 +10,7 @@ This script is focused only on the MBTA GTFS data, released by the Massachusetts
     1. In windows: `venv\Scripts\activate`
     2. In linux/macOS: `source venv/bin/activate`
 3. Run the requirements.txt file: `pip install -r requirements.txt`
-4. Set your environment variables in `.env` for the database connection
+4. Set your environment variables in `.env.local` for the database connection. An example of this is in `.env`
 5. Download the GTFS files at https://www.mbta.com/developers/gtfs
 6. Run the `create.py` file: `python create.py`
 

@@ -6,3 +6,4 @@ stops.txt
 trips.txt
 venv
 __pycache__
+.env.local

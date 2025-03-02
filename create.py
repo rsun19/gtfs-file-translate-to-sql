@@ -3,7 +3,7 @@ from dotenv import dotenv_values
 from const import FILES_DICT
 from createUtils import recursive_split
 
-database_config = dotenv_values('.env')
+database_config = dotenv_values('.env.local')
 
 conn = psycopg2.connect(
     database=database_config['DATABASE'],
