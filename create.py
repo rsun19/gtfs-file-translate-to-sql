@@ -1,6 +1,7 @@
 import psycopg2
 from dotenv import dotenv_values
 from const import FILES_DICT
+from createUtils import recursive_split
 
 database_config = dotenv_values('.env')
 
@@ -12,24 +13,6 @@ conn = psycopg2.connect(
 )
 
 cursor = conn.cursor()
-
-def recursive_split(line):
-    if not line:
-        return []
-    if '"' not in line:
-        return line.strip().split(',')
-    l_idx = line.index('"')
-    line_properties = []
-    left_properties = []
-    if line[0] != '"':
-        left_properties.extend(line[0: line.index(',"')].strip().split(','))
-    line_properties.extend(left_properties)
-    line_properties.append(line[l_idx+1: line[l_idx+1:].index('"') + l_idx + 1])
-    right_properties = recursive_split(
-        line[line[l_idx+1:].index('"') + l_idx + 3:] if line[l_idx+1:].index('"') + l_idx + 3 < len(line) - 1 else ''
-    )
-    line_properties.extend(right_properties)
-    return line_properties
 
 for file in FILES_DICT.values():
     with open(file['file'], 'r') as f:
