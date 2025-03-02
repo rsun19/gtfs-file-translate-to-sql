@@ -10,4 +10,4 @@ This script is focused only on the MBTA GTFS data, released by the Massachusetts
 3. Run the requirements.txt file: `pip install -r requirements.txt`
 4. Set your environment variables in `.env` for the database connection
 5. Download the GTFS files at https://www.mbta.com/developers/gtfs
-6. Run the `translate.py` file: `python create.py`
+6. Run the `create.py` file: `python create.py`
